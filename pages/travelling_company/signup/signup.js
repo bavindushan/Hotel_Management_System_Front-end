@@ -1,16 +1,3 @@
-function togglePassword(inputId) {
-  const input = document.getElementById(inputId);
-  const icon = input.nextElementSibling.querySelector('.eye-icon');
-  
-  if (input.type === 'password') {
-    input.type = 'text';
-    icon.src = '../images/eye-slash-icon.svg';
-  } else {
-    input.type = 'password';
-    icon.src = '../images/eye-icon.svg';
-  }
-}
-
 // Password strength checker
 document.getElementById('password').addEventListener('input', function() {
   const password = this.value;
@@ -44,5 +31,5 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
   
   // Here you would normally send the data to your backend
   alert('Account created successfully! Please check your email for verification.');
-  window.location.href = 'signin.php';
+  window.location.href = '../signin/signin.html'; // Redirect to sign-in page
 });

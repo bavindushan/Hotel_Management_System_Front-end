@@ -1,29 +1,30 @@
-function togglePassword(inputId) {
-  const input = document.getElementById(inputId);
-  const icon = input.nextElementSibling.querySelector('.eye-icon');
-  
-  if (input.type === 'password') {
-    input.type = 'text';
-    icon.src = '/HolidayGetaway/assets/images/logo/eye-slash-icon.png';
-  } else {
-    input.type = 'password';
-    icon.src = '/HolidayGetaway/assets/images/logo/eye-icon.png';
-  }
-}
-
 // Sign In Form submission
 document.getElementById('signinForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  
+
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
-  
+
   // Here you would normally validate credentials with your backend
   if (email && password) {
-    alert('Sign in successful! Redirecting to dashboard...');
-    window.location.href = '../index.php'; // or dashboard.php
+    Swal.fire({
+      title: 'Sign In Successful!',
+      text: 'Redirecting to home page...',
+      icon: 'success',
+      confirmButtonText: 'Okay'
+    }).then(() => {
+      window.location.href = '../dashboard/receptionist-dashboard.html'; 
+    });
+  } else {
+    Swal.fire({
+      title: 'Error!',
+      text: 'Please enter both email and password.',
+      icon: 'error',
+      confirmButtonText: 'Okay'
+    });
   }
 });
+
 
 // Forgot Password Form submission
 document.getElementById('forgotPasswordForm').addEventListener('submit', function(e) {
