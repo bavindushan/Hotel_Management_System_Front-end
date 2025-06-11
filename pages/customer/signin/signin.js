@@ -20,7 +20,7 @@ document.getElementById('signinForm').addEventListener('submit', function(e) {
       title: 'Error!',
       text: 'Please enter both email and password.',
       icon: 'error',
-      confirmButtonText: 'Cool'
+      confirmButtonText: 'Okay'
     });
   }
 });
