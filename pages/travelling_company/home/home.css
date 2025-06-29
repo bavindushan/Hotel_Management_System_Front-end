@@ -379,6 +379,23 @@
   font-weight: 600;
   color: #333;
 }
+select.form-select.form-select-lg {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  line-height: 1.5;
+  font-size: 1.125rem; 
+  box-sizing: border-box;
+  height: auto !important;
+}
+
+
+
+
+
+
+
+
+
 
 /* Location Cards */
 .featured-locations {
