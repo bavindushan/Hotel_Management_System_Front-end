@@ -313,6 +313,7 @@ function logout() {
     }
   });
 }
+
 // Add CSS animations for notifications
 const style = document.createElement('style');
 style.textContent = `
